@@ -19,13 +19,11 @@ var app = {
 		});
 	},
     
-    initialize: function() {
-		var self = this;
-		this.store = new MemoryStore(function() {
-			self.renderHomeView();
-		});
-		this.homeTpl = Handlebars.compile($("#home-tpl").html());
-		this.employeeLiTpl = Handlebars.compile($("#employee-li-tpl").html());
+	initialize: function() {
+	    var self = this;
+	    this.store = new MemoryStore(function() {
+	        $('body').html(new HomeView(self.store).render().el);
+	    });
 	}
 
 };
