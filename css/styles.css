@@ -182,6 +182,16 @@ h2 {
     margin: 0px;
 }
 
+.scroll {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    position: absolute;
+    top: 84px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
 .employee-image {
     float:left;
     margin:10px;
